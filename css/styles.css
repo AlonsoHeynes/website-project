@@ -1,0 +1,216 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/** Global **/
+.container{
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+
+/** First section **/
+.illustration-section {
+  background-image: url('../images/bg-intro.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  text-align: center;
+}
+
+.illustration-img {
+  padding: 0 60px;
+}
+
+.illustration-img img {
+  width: 100%;
+  display: inline-block;
+}
+
+.relleno {
+  height: 10px;
+  margin-top: 110px;
+}
+
+.nav-menu {
+  padding: 40px 0 60px;
+}
+
+.logo {
+  float: left;
+  width: 50%;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.social-menu {
+  float: right;
+  width: 50%;
+}
+
+.social-menu a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+
+/** Second section **/
+.nav-menu2 {
+  display: none;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.nav-menu2 nav {
+  text-align: right;
+}
+
+.nav-menu2 nav a {
+  color: hsl(243, 87%, 12%);
+  font-size: 24px;
+}
+
+.section2 {
+  padding: 0 60px;
+}
+
+.section2 h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  color: hsl(243, 87%, 12%);
+}
+
+.section2 p {
+  font-family: 'Open sans', sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+  color: hsl(0, 0%, 50%);
+}
+
+.sign-up {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.sign-up h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: hsl(243, 87%, 12%);
+}
+
+.sign-up input {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 6px;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.sign-up button {
+  background-color: hsl(163, 95%, 43%);
+  border: none;
+  color: #fff;
+  font-family: 'Open sans', sans-serif;
+  padding: 8px 35px;
+  font-size: 12px;
+  border-radius: 3px;
+  -webkit-box-shadow: 3px 3px 6px -1px rgba(221,221,221,1);
+  -moz-box-shadow: 3px 3px 6px -1px rgba(221,221,221,1);
+  box-shadow: 3px 3px 6px -1px rgba(221,221,221,1);
+}
+
+.privacy-p {
+  text-align: right;
+  color: hsl(243, 87%, 12%);
+  font-size: 12px;
+  font-family: 'Open sans', sans-serif;
+  margin-bottom: 10px;
+}
+
+
+/** Media queries **/
+@media only screen and (min-width: 768px){
+  .illustration-section {
+    float: left;
+    width: 50%;
+    background-size: cover;
+  }
+
+  .section2 {
+    float: right;
+    width: 50%;
+  }
+
+  .illustration-img {
+    padding: initial;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .nav-menu {
+    visibility: hidden;
+  }
+
+  .nav-menu2 {
+    display: block;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .section2 h1 {
+    font-size: 35px;
+  }
+
+  .section2 p {
+    font-size: 18px;
+  }
+
+  .sign-up {
+    margin-bottom: 80px;
+  }
+
+  .sign-up h2 {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .sign-up input {
+    display: inline-block;
+    width: 55%;
+    font-size: 18px;
+    padding: 8px;
+    margin-right: 10px;
+  }
+
+  .sign-up button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+
+}
+
+
+/** Frontendmentor attribution **/
+.attribution {
+  font-size: 11px; text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
